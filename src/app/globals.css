@@ -14,7 +14,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
+  scroll-padding-top: 6.5rem;
 }
 
 body {
@@ -23,7 +23,20 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   scrollbar-gutter: stable;
+  -webkit-overflow-scrolling: touch;
+}
+
+main {
+  scroll-snap-type: y proximity;
+}
+
+section {
+  scroll-margin-top: 7rem;
+  scroll-snap-align: start;
 }
 
 * {
@@ -55,5 +68,19 @@ img,
 video {
   max-width: 100%;
   height: auto;
+}
+
+@media (max-width: 576px) {
+  html {
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  .scroll-reveal {
+    transform: translateY(16px);
+  }
 }
 

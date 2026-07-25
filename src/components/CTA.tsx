@@ -18,7 +18,7 @@ export default function CTA() {
 
             <a
               href="mailto:adeel61524387@gmail.com"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-400 px-6 py-3 font-medium text-slate-950 transition hover:bg-amber-300"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-amber-400 px-6 py-3 font-medium text-slate-950 transition hover:bg-amber-300 sm:w-auto"
             >
               <Send size={16} />
               Book a Discovery Call
