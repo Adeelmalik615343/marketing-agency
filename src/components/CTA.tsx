@@ -2,9 +2,9 @@ import { ArrowRight, Send } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section id="contact" className="bg-gradient-to-br from-amber-500/20 via-slate-900 to-slate-950 py-24 text-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="rounded-[2rem] border border-amber-400/20 bg-slate-900/70 p-10 shadow-[0_0_80px_rgba(245,158,11,0.16)]">
+    <section id="contact" className="bg-gradient-to-br from-amber-500/20 via-slate-900 to-slate-950 py-20 text-white sm:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="rounded-[2rem] border border-amber-400/20 bg-slate-900/70 p-6 shadow-[0_0_80px_rgba(245,158,11,0.16)] sm:p-10">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-300">Let’s build something memorable</p>
