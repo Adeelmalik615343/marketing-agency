@@ -41,7 +41,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-slate-950 text-white">
+    <main className="min-h-screen overflow-x-hidden overflow-y-visible bg-slate-950 text-white">
       <LoadingScreen />
       <Navbar />
       <div data-reveal className="scroll-reveal">

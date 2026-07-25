@@ -8,20 +8,30 @@ export default function LoadingScreen() {
 
   useEffect(() => {
     const timer = window.setTimeout(() => setIsLoading(false), 1400);
-    const root = document.documentElement;
-    const body = document.body;
 
-    root.style.overflow = "hidden";
-    body.style.overflow = "hidden";
+    if (isLoading) {
+      const root = document.documentElement;
+      const body = document.body;
+
+      root.style.overflow = "hidden";
+      body.style.overflow = "hidden";
+      body.style.height = "100%";
+      root.style.height = "100%";
+    }
 
     return () => {
       window.clearTimeout(timer);
-      root.style.overflow = "";
-      body.style.overflow = "";
-      body.style.height = "";
-      root.style.height = "";
+      if (!isLoading) {
+        const root = document.documentElement;
+        const body = document.body;
+
+        root.style.overflow = "";
+        body.style.overflow = "";
+        body.style.height = "";
+        root.style.height = "";
+      }
     };
-  }, []);
+  }, [isLoading]);
 
   if (!isLoading) {
     return null;
