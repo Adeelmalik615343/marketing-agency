@@ -31,12 +31,11 @@ body {
 }
 
 main {
-  scroll-snap-type: y proximity;
+  min-height: 100vh;
 }
 
 section {
   scroll-margin-top: 7rem;
-  scroll-snap-align: start;
 }
 
 * {

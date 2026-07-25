@@ -18,6 +18,8 @@ export default function LoadingScreen() {
       window.clearTimeout(timer);
       root.style.overflow = "";
       body.style.overflow = "";
+      body.style.height = "";
+      root.style.height = "";
     };
   }, []);
 
