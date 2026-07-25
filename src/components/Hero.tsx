@@ -33,7 +33,7 @@ function HeroOrbit() {
 
 function HeroScene() {
   return (
-    <div className="relative h-[360px] w-full max-w-[420px] overflow-hidden rounded-[2rem] border border-amber-400/20 bg-slate-900/75 p-3 shadow-[0_0_80px_rgba(245,158,11,0.2)] backdrop-blur-xl">
+    <div className="relative h-[260px] w-full max-w-[420px] overflow-hidden rounded-[2rem] border border-amber-400/20 bg-slate-900/75 p-3 shadow-[0_0_80px_rgba(245,158,11,0.2)] backdrop-blur-xl sm:h-[320px] lg:h-[360px]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(245,158,11,0.22),_transparent_55%)]" />
       <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
         <ambientLight intensity={0.95} />
@@ -75,7 +75,7 @@ export default function Hero() {
           </div>
           <h1
             ref={headlineRef}
-            className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-7xl"
+            className="text-3xl font-semibold leading-tight sm:text-5xl lg:text-7xl"
           >
             We craft bold digital experiences that look premium and sell better.
           </h1>

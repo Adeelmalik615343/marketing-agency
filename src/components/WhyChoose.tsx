@@ -25,9 +25,9 @@ const points = [
 
 export default function WhyChoose() {
   return (
-    <section id="about" className="bg-slate-950 py-24 text-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <section id="about" className="bg-slate-950 py-20 text-white sm:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-10">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-300">Why Choose Us</p>
             <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
@@ -38,7 +38,7 @@ export default function WhyChoose() {
             </p>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2">
             {points.map((point) => {
               const Icon = point.icon;
               return (

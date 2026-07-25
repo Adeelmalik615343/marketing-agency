@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Clients from "@/components/Clients";
@@ -13,21 +16,67 @@ import Footer from "@/components/Footer";
 import LoadingScreen from "@/components/LoadingScreen";
 
 export default function Home() {
+  useEffect(() => {
+    const elements = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
+
+    if (!elements.length) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.14, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    elements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <main className="min-h-screen overflow-x-hidden bg-slate-950 text-white">
       <LoadingScreen />
       <Navbar />
-      <Hero />
-      <Clients />
-      <Services />
-      <WhyChoose />
-      <Portfolio />
-      <Process />
-      <Testimonials />
-      <Pricing />
-      <FAQ />
-      <CTA />
-      <Footer />
+      <div data-reveal className="scroll-reveal">
+        <Hero />
+      </div>
+      <div data-reveal className="scroll-reveal">
+        <Clients />
+      </div>
+      <div data-reveal className="scroll-reveal">
+        <Services />
+      </div>
+      <div data-reveal className="scroll-reveal">
+        <WhyChoose />
+      </div>
+      <div data-reveal className="scroll-reveal">
+        <Portfolio />
+      </div>
+      <div data-reveal className="scroll-reveal">
+        <Process />
+      </div>
+      <div data-reveal className="scroll-reveal">
+        <Testimonials />
+      </div>
+      <div data-reveal className="scroll-reveal">
+        <Pricing />
+      </div>
+      <div data-reveal className="scroll-reveal">
+        <FAQ />
+      </div>
+      <div data-reveal className="scroll-reveal">
+        <CTA />
+      </div>
+      <div data-reveal className="scroll-reveal">
+        <Footer />
+      </div>
     </main>
   );
 }

@@ -20,14 +20,14 @@ const reviews = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-slate-950 py-24 text-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="bg-slate-950 py-20 text-white sm:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-300">Testimonials</p>
           <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">Trusted by founders who care about experience.</h2>
         </div>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {reviews.map((review) => (
             <div key={review.name} className="rounded-3xl border border-white/10 bg-white/5 p-8">
               <div className="flex items-center gap-1 text-amber-300">

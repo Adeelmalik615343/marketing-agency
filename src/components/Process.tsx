@@ -25,14 +25,14 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="bg-slate-900 py-24 text-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="bg-slate-900 py-20 text-white sm:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-300">Process</p>
           <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">A simple process that keeps momentum high.</h2>
         </div>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-4">
+        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
