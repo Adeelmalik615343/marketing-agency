@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-300">Aether Studio</p>
-          <h2 className="mt-3 text-2xl font-semibold text-white">Premium web experiences for ambitious brands.</h2>
+          <h2 className="mt-3 text-2xl font-semibold text-white">Premium  hy web experiences for ambitious brands.</h2>
           <p className="mt-4 max-w-xl text-sm leading-7 text-slate-400">
             Strategy, design, and product execution tailored for founders who want standout digital presence.
           </p>
