@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Aether Studio | Premium Digital Agency",
-  description: "A premium agency website built with Next.js, Tailwind CSS, and modern motion design.",
+  description:
+    "A premium agency website built with Next.js, Tailwind CSS, and modern motion design.",
 };
 
 export default function RootLayout({
@@ -27,7 +29,32 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col overflow-x-hidden">{children}</body>
+      <head>
+        {/* Google Analytics */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-Z5QH5D56GJ"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+
+            gtag('config', 'G-Z5QH5D56GJ');
+          `}
+        </Script>
+      </head>
+
+      <body className="min-h-screen">
+        {children}
+      </body>
     </html>
   );
 }
