@@ -29,7 +29,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <head>
+      <body className="min-h-screen">
+        {children}
+
         {/* Google Analytics */}
         <Script
           async
@@ -46,14 +48,9 @@ export default function RootLayout({
             }
 
             gtag('js', new Date());
-
             gtag('config', 'G-Z5QH5D56GJ');
           `}
         </Script>
-      </head>
-
-      <body className="min-h-screen">
-        {children}
       </body>
     </html>
   );
