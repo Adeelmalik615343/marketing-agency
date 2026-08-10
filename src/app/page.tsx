@@ -11,6 +11,7 @@ import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -41,6 +42,7 @@ export default function Home() {
       </main>
 
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }
