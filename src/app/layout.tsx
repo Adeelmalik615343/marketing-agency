@@ -1,24 +1,7 @@
 import type { Metadata } from "next";
-<<<<<<< HEAD
-import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-=======
-import Script from "next/script";
-import "./globals.css";
-
->>>>>>> 248fe33 (ok)
 export const metadata: Metadata = {
   title: "Aether Studio | Premium Digital Agency",
   description:
