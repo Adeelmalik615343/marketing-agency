@@ -9,7 +9,7 @@ import Clients from "@/components/Clients";
 import Services from "@/components/Services";
 import WhyChoose from "@/components/WhyChoose";
 import Process from "@/components/Process";
-
+import FAQ from "@/components/FAQ";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 
@@ -61,7 +61,7 @@ export default function Home() {
       
         <Testimonials />
         <Pricing />
-       
+       <FAQ />
         <CTA />
       </main>
 
