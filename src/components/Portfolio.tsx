@@ -3,7 +3,7 @@
 import {
   ArrowUpRight,
   ExternalLink,
-  Github,
+  GitBranch,
   Play,
   Sparkles,
 } from "lucide-react";
@@ -102,7 +102,7 @@ export default function Portfolio() {
             rel="noreferrer"
             className="inline-flex w-fit shrink-0 items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-medium text-slate-300 transition hover:border-amber-400/30 hover:bg-amber-400/10 hover:text-amber-200"
           >
-            <Github size={17} />
+            <GitBranch size={17} />
             View GitHub
             <ExternalLink size={14} />
           </a>
