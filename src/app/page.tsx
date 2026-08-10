@@ -12,7 +12,7 @@ import Process from "@/components/Process";
 import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
-import FAQ from "@/components/FAQ";
+
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -61,7 +61,7 @@ export default function Home() {
         <Portfolio />
         <Testimonials />
         <Pricing />
-        <FAQ />
+       
         <CTA />
       </main>
 
