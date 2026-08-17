@@ -176,7 +176,7 @@ export default function FullProjectCaseStudy() {
 
           <div className="mt-10 overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900 shadow-2xl">
             <div className="aspect-video">
-              {/* Replace this with your video URL */}
+              {https://player.cloudinary.com/embed/?cloud_name=dol2tqymo&public_id=home_20260813_104516_818_FINAL_jdkjd9}
               <video
                 className="h-full w-full object-cover"
                 controls
