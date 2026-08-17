@@ -182,7 +182,7 @@ export default function FullProjectCaseStudy() {
                 controls
                 preload="metadata"
               >
-                <source src="/videos/full-project.mp4" type="video/mp4" />
+                <source src="https://player.cloudinary.com/embed/?cloud_name=dol2tqymo&public_id=home_20260813_104516_818_FINAL_jdkjd9"/>
                 Your browser does not support the video tag.
               </video>
             </div>
