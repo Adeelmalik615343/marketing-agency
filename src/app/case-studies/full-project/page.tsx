@@ -165,35 +165,32 @@ export default function FullProjectCaseStudy() {
         </div>
       </section>
 
-      {/* VIDEO */}
-      <section className="border-y border-white/10 bg-white/[0.02] px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeading
-            eyebrow="Project Walkthrough"
-            title="See the e-commerce experience in action"
-            text="Use this section for your project walkthrough video. Showing the actual product helps visitors understand the functionality instead of relying only on screenshots."
-          />
+     {/* VIDEO */}
+<section className="border-y border-white/10 bg-white/[0.02] px-4 py-16 sm:px-6 lg:px-8">
+  <div className="mx-auto max-w-7xl">
+    <SectionHeading
+      eyebrow="Project Walkthrough"
+      title="See the e-commerce experience in action"
+      text="Watch the full project walkthrough to see the design, product management, authentication, ordering flow, admin dashboard, and other features in action."
+    />
 
-          <div className="mt-10 overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900 shadow-2xl">
-            <div className="aspect-video">
-              {https://player.cloudinary.com/embed/?cloud_name=dol2tqymo&public_id=home_20260813_104516_818_FINAL_jdkjd9}
-              <video
-                className="h-full w-full object-cover"
-                controls
-                preload="metadata"
-              >
-                <source src="https://player.cloudinary.com/embed/?cloud_name=dol2tqymo&public_id=home_20260813_104516_818_FINAL_jdkjd9"/>
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
+    <div className="mt-10 overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900 shadow-2xl">
+      <div className="aspect-video">
+        <iframe
+          src="https://player.cloudinary.com/embed/?cloud_name=dol2tqymo&public_id=home_20260813_104516_818_FINAL_jdkjd9"
+          className="h-full w-full"
+          allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+          allowFullScreen
+          title="E-commerce Project Walkthrough"
+        />
+      </div>
+    </div>
 
-          <p className="mt-4 text-center text-sm text-slate-500">
-            Full project walkthrough — replace /videos/full-project.mp4 with
-            your actual project video.
-          </p>
-        </div>
-      </section>
+    <p className="mt-4 text-center text-sm text-slate-500">
+      Full project walkthrough — e-commerce website and admin dashboard.
+    </p>
+  </div>
+</section>
 
       {/* OVERVIEW */}
       <section className="px-4 py-20 sm:px-6 lg:px-8">
