@@ -185,37 +185,33 @@ export default function PizzaHutCaseStudy() {
         </div>
       </section>
 
-      {/* VIDEO */}
-      <section className="border-y border-white/10 bg-white/[0.02] px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeading
-            eyebrow="Project Walkthrough"
-            title="See the restaurant experience in action"
-            text="Show potential clients how the website works through a short walkthrough covering the homepage, menu, products, ordering journey, and delivery experience."
-          />
+     {/* VIDEO */}
+<section className="border-y border-white/10 bg-white/[0.02] px-4 py-16 sm:px-6 lg:px-8">
+  <div className="mx-auto max-w-7xl">
+    <SectionHeading
+      eyebrow="Project Walkthrough"
+      title="See the restaurant experience in action"
+      text="Show potential clients how the website works through a short walkthrough covering the homepage, menu, products, ordering journey, and delivery experience."
+    />
 
-          <div className="mt-10 overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900 shadow-2xl">
-            <div className="aspect-video">
-              <video
-                className="h-full w-full object-cover"
-                controls
-                preload="metadata"
-              >
-                <source
-                  src="/videos/pizza-hut.mp4"
-                  type="video/mp4"
-                />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
+    <div className="mt-10 overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900 shadow-2xl">
+      <div className="aspect-video">
+        <iframe
+          src="https://player.cloudinary.com/embed/?cloud_name=dol2tqymo&public_id=portfolio_final_xgigap"
+          className="h-full w-full"
+          allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+          allowFullScreen
+          frameBorder="0"
+          title="Pizza Hut Restaurant Website Project Walkthrough"
+        />
+      </div>
+    </div>
 
-          <p className="mt-4 text-center text-sm text-slate-500">
-            Restaurant website walkthrough — replace
-            /videos/pizza-hut.mp4 with your actual project video.
-          </p>
-        </div>
-      </section>
+    <p className="mt-4 text-center text-sm text-slate-500">
+      Restaurant website walkthrough — complete project demonstration.
+    </p>
+  </div>
+</section>
 
       {/* OVERVIEW */}
       <section className="px-4 py-20 sm:px-6 lg:px-8">
