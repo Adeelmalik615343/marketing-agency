@@ -114,29 +114,29 @@ export default function FAQ() {
                       : "border-white/10 bg-white/[0.03]"
                   }`}
                 >
-                <button
-                  type="button"
-                  onClick={() => toggleFAQ(index)}
-                  aria-expanded={isOpen}
-                  className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-6"
-                >
-                  <span className="flex items-center gap-4">
-                    <span className="hidden text-xs font-semibold text-amber-300 sm:block">
-                      {String(index + 1).padStart(2, "0")}
+                  <button
+                    type="button"
+                    onClick={() => toggleFAQ(index)}
+                    aria-expanded={isOpen}
+                    className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-6"
+                  >
+                    <span className="flex items-center gap-4">
+                      <span className="hidden text-xs font-semibold text-amber-300 sm:block">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+
+                      <span className="text-sm font-medium text-white sm:text-base">
+                        {faq.question}
+                      </span>
                     </span>
 
-                    <span className="text-sm font-medium text-white sm:text-base">
-                      {faq.question}
-                    </span>
-                  </span>
-
-                  <ChevronDown
-                    size={20}
-                    className={`shrink-0 text-amber-300 transition-transform duration-300 ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
+                    <ChevronDown
+                      size={20}
+                      className={`shrink-0 text-amber-300 transition-transform duration-300 ${
+                        isOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
 
                   {isOpen && (
                     <div className="border-t border-white/10 px-5 pb-6 pt-5 sm:px-6">
@@ -154,14 +154,14 @@ export default function FAQ() {
         {/* Bottom CTA */}
         <ScrollReveal className="mt-10">
           <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-7 text-center sm:p-10">
-          <h3 className="text-xl font-semibold text-white">
-            Have a different question?
-          </h3>
+            <h3 className="text-xl font-semibold text-white">
+              Have a different question?
+            </h3>
 
-          <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-slate-500">
-            Tell us what you want to build and we can discuss the best
-            technology and growth solution for your business.
-          </p>
+            <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-slate-500">
+              Tell us what you want to build and we can discuss the best
+              technology and growth solution for your business.
+            </p>
 
             <a
               href="#contact"
