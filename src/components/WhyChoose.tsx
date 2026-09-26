@@ -1,5 +1,6 @@
 "use client";
 
+import ScrollReveal from "@/components/ScrollReveal";
 import {
   Bot,
   CheckCircle2,
@@ -66,30 +67,32 @@ export default function WhyChoose() {
       <div className="pointer-events-none absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-amber-400/5 blur-[130px]" />
 
       <div className="relative mx-auto max-w-7xl">
-        {/* Header */}
-        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-          <div>
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-amber-400/20 bg-amber-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-300">
-              <Zap size={14} />
-              Why work with us
+        <ScrollReveal>
+          {/* Header */}
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+            <div>
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-amber-400/20 bg-amber-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-300">
+                <Zap size={14} />
+                Why work with us
+              </div>
+
+              <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                More than a website.
+                <span className="block text-amber-300">
+                  A complete digital system.
+                </span>
+              </h2>
             </div>
 
-            <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-              More than a website.
-              <span className="block text-amber-300">
-                A complete digital system.
-              </span>
-            </h2>
+            <div className="lg:pb-1">
+              <p className="max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
+                We combine development, AI, automation, marketing, and
+                growth thinking to create digital systems that are useful
+                today and ready to evolve tomorrow.
+              </p>
+            </div>
           </div>
-
-          <div className="lg:pb-1">
-            <p className="max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
-              We combine development, AI, automation, marketing, and
-              growth thinking to create digital systems that are useful
-              today and ready to evolve tomorrow.
-            </p>
-          </div>
-        </div>
+        </ScrollReveal>
 
         {/* Main feature area */}
         <div className="mt-16 grid gap-5 lg:grid-cols-12">
@@ -138,14 +141,14 @@ export default function WhyChoose() {
 
           {/* Feature grid */}
           <div className="grid gap-4 sm:grid-cols-2 lg:col-span-7">
-            {points.map((point) => {
+            {points.map((point, index) => {
               const Icon = point.icon;
 
               return (
-                <article
-                  key={point.title}
-                  className="group rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-6 transition duration-300 hover:-translate-y-1 hover:border-amber-400/20 hover:bg-white/[0.055]"
-                >
+                <ScrollReveal key={point.title} delay={index * 0.07}>
+                  <article
+                    className="group rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-6 transition duration-300 hover:-translate-y-1 hover:border-amber-400/20 hover:bg-white/[0.055]"
+                  >
                   <div className="flex items-start justify-between">
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-slate-900 text-amber-300 transition group-hover:border-amber-400/20 group-hover:bg-amber-400/10">
                       <Icon size={19} />
@@ -163,29 +166,32 @@ export default function WhyChoose() {
                   <p className="mt-3 text-sm leading-6 text-slate-400">
                     {point.description}
                   </p>
-                </article>
+                  </article>
+                </ScrollReveal>
               );
             })}
           </div>
         </div>
 
         {/* Bottom trust bar */}
-        <div className="mt-5 grid overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.025] sm:grid-cols-3">
-          <TrustItem
-            title="Modern Stack"
-            text="Built with current technologies"
-          />
+        <ScrollReveal className="mt-5">
+          <div className="grid overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.025] sm:grid-cols-3">
+            <TrustItem
+              title="Modern Stack"
+              text="Built with current technologies"
+            />
 
-          <TrustItem
-            title="Business Focus"
-            text="Technology tied to outcomes"
-          />
+            <TrustItem
+              title="Business Focus"
+              text="Technology tied to outcomes"
+            />
 
-          <TrustItem
-            title="Long-Term Thinking"
-            text="Systems designed to evolve"
-          />
-        </div>
+            <TrustItem
+              title="Long-Term Thinking"
+              text="Systems designed to evolve"
+            />
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

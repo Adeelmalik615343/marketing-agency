@@ -3,7 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Aether Studio | Premium Digital Agency",
+  title: "MyCompany | Premium Digital Agency",
   description:
     "A premium agency website built with Next.js, Tailwind CSS, and modern motion design.",
 };

@@ -1,5 +1,6 @@
 "use client";
 
+import ScrollReveal from "@/components/ScrollReveal";
 import {
   ArrowRight,
   Bot,
@@ -89,35 +90,37 @@ export default function Services() {
       <div className="pointer-events-none absolute bottom-0 right-0 h-80 w-80 rounded-full bg-blue-500/5 blur-[130px]" />
 
       <div className="relative mx-auto max-w-7xl">
-        {/* Header */}
-        <div className="max-w-3xl">
-          <div className="mb-5 inline-flex items-center rounded-full border border-amber-400/20 bg-amber-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-300">
-            What we build
+        <ScrollReveal>
+          {/* Header */}
+          <div className="max-w-3xl">
+            <div className="mb-5 inline-flex items-center rounded-full border border-amber-400/20 bg-amber-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-300">
+              What we build
+            </div>
+
+            <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Digital services built around{" "}
+              <span className="text-amber-300">real business goals.</span>
+            </h2>
+
+            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
+              From your first website to AI-powered automation and complete
+              growth systems, we combine development, technology, marketing,
+              and automation to build digital infrastructure that works for
+              your business.
+            </p>
           </div>
-
-          <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Digital services built around{" "}
-            <span className="text-amber-300">real business goals.</span>
-          </h2>
-
-          <p className="mt-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
-            From your first website to AI-powered automation and complete
-            growth systems, we combine development, technology, marketing,
-            and automation to build digital infrastructure that works for
-            your business.
-          </p>
-        </div>
+        </ScrollReveal>
 
         {/* Services */}
         <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => {
+          {services.map((service, index) => {
             const Icon = service.icon;
 
             return (
-              <article
-                key={service.title}
-                className="group relative flex min-h-[360px] flex-col overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.035] p-7 transition duration-300 hover:-translate-y-1 hover:border-amber-400/25 hover:bg-white/[0.055] hover:shadow-[0_20px_70px_rgba(0,0,0,0.25)]"
-              >
+              <ScrollReveal key={service.title} delay={index * 0.08}>
+                <article
+                  className="group relative flex min-h-[360px] flex-col overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.035] p-7 transition duration-300 hover:-translate-y-1 hover:border-amber-400/25 hover:bg-white/[0.055] hover:shadow-[0_20px_70px_rgba(0,0,0,0.25)]"
+                >
                 {/* Number */}
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-xs tracking-widest text-amber-300/70">
@@ -166,13 +169,15 @@ export default function Services() {
 
                 {/* Hover glow */}
                 <div className="pointer-events-none absolute -bottom-20 -right-20 h-40 w-40 rounded-full bg-amber-400/5 blur-3xl transition group-hover:bg-amber-400/10" />
-              </article>
+                </article>
+              </ScrollReveal>
             );
           })}
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-12 flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/10 bg-white/[0.025] p-7 sm:p-8 lg:flex-row lg:items-center">
+        <ScrollReveal className="mt-12">
+          <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/10 bg-white/[0.025] p-7 sm:p-8 lg:flex-row lg:items-center">
           <div>
             <p className="text-lg font-semibold text-white">
               Need something custom?
@@ -184,14 +189,15 @@ export default function Services() {
             </p>
           </div>
 
-          <a
-            href="#contact"
-            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-amber-300"
-          >
-            Tell Us What You Need
-            <ArrowRight size={17} />
-          </a>
-        </div>
+            <a
+              href="#contact"
+              className="inline-flex shrink-0 items-center gap-2 rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-amber-300"
+            >
+              Tell Us What You Need
+              <ArrowRight size={17} />
+            </a>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

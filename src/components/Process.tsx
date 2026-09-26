@@ -1,5 +1,6 @@
 "use client";
 
+import ScrollReveal from "@/components/ScrollReveal";
 import {
   ArrowRight,
   Bot,
@@ -62,26 +63,28 @@ export default function Process() {
       <div className="pointer-events-none absolute bottom-0 right-[10%] h-80 w-80 rounded-full bg-blue-500/5 blur-[130px]" />
 
       <div className="relative mx-auto max-w-7xl">
-        {/* Header */}
-        <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
-          <div>
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-amber-400/20 bg-amber-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-300">
-              <Sparkles size={14} />
-              Our process
+        <ScrollReveal>
+          {/* Header */}
+          <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+            <div>
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-amber-400/20 bg-amber-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-300">
+                <Sparkles size={14} />
+                Our process
+              </div>
+
+              <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                From idea to{" "}
+                <span className="text-amber-300">working system.</span>
+              </h2>
             </div>
 
-            <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              From idea to{" "}
-              <span className="text-amber-300">working system.</span>
-            </h2>
+            <p className="max-w-2xl text-base leading-8 text-slate-400 sm:text-lg lg:ml-auto">
+              A straightforward process designed to keep projects clear,
+              practical, and moving forward — from the first conversation
+              through launch and ongoing growth.
+            </p>
           </div>
-
-          <p className="max-w-2xl text-base leading-8 text-slate-400 sm:text-lg lg:ml-auto">
-            A straightforward process designed to keep projects clear,
-            practical, and moving forward — from the first conversation
-            through launch and ongoing growth.
-          </p>
-        </div>
+        </ScrollReveal>
 
         {/* Process timeline */}
         <div className="relative mt-16">
@@ -89,14 +92,14 @@ export default function Process() {
           <div className="pointer-events-none absolute left-[12.5%] right-[12.5%] top-7 hidden h-px bg-gradient-to-r from-transparent via-white/10 to-transparent lg:block" />
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {steps.map((step) => {
+            {steps.map((step, index) => {
               const Icon = step.icon;
 
               return (
-                <article
-                  key={step.number}
-                  className="group relative flex flex-col rounded-[1.75rem] border border-white/10 bg-white/[0.035] p-6 transition duration-300 hover:-translate-y-1 hover:border-amber-400/20 hover:bg-white/[0.055] sm:p-7"
-                >
+                <ScrollReveal key={step.number} delay={index * 0.08}>
+                  <article
+                    className="group relative flex flex-col rounded-[1.75rem] border border-white/10 bg-white/[0.035] p-6 transition duration-300 hover:-translate-y-1 hover:border-amber-400/20 hover:bg-white/[0.055] sm:p-7"
+                  >
                   {/* Step indicator */}
                   <div className="relative z-10 flex items-center justify-between">
                     <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-slate-900 text-amber-300 shadow-lg transition group-hover:border-amber-400/30 group-hover:bg-amber-400/10">
@@ -147,15 +150,17 @@ export default function Process() {
                   </div>
 
                   {/* Hover accent */}
-                  <div className="pointer-events-none absolute bottom-0 left-6 right-6 h-px origin-left scale-x-0 bg-amber-400/50 transition-transform duration-500 group-hover:scale-x-100" />
-                </article>
+                    <div className="pointer-events-none absolute bottom-0 left-6 right-6 h-px origin-left scale-x-0 bg-amber-400/50 transition-transform duration-500 group-hover:scale-x-100" />
+                  </article>
+                </ScrollReveal>
               );
             })}
           </div>
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-8 flex flex-col gap-6 rounded-[1.75rem] border border-white/10 bg-gradient-to-r from-white/[0.035] to-amber-400/[0.035] p-6 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
+        <ScrollReveal className="mt-8">
+          <div className="flex flex-col gap-6 rounded-[1.75rem] border border-white/10 bg-gradient-to-r from-white/[0.035] to-amber-400/[0.035] p-6 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex items-start gap-4">
             <div className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-400/10 text-amber-300 sm:flex">
               <Bot size={20} />
@@ -173,14 +178,15 @@ export default function Process() {
             </div>
           </div>
 
-          <a
-            href="#contact"
-            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-amber-300"
-          >
-            Start a Conversation
-            <ArrowRight size={17} />
-          </a>
-        </div>
+            <a
+              href="#contact"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-amber-300"
+            >
+              Start a Conversation
+              <ArrowRight size={17} />
+            </a>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

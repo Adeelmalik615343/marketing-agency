@@ -32,7 +32,7 @@ export default function Navbar() {
           </div>
           <div>
             <p className="text-sm font-semibold tracking-[0.3em] text-slate-100 uppercase">
-              Aether
+              MyCompany
             </p>
             <p className="text-xs text-slate-400">Digital Agency</p>
           </div>
