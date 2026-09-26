@@ -15,7 +15,7 @@ const plans = [
   {
     name: "Launch",
     label: "For new businesses",
-    price: "From $750",
+    price: "From PKR 15,000",
     description:
       "A strong digital foundation for startups, small businesses, and new brands ready to establish a professional online presence.",
     icon: Sparkles,
@@ -32,7 +32,7 @@ const plans = [
   {
     name: "Growth",
     label: "Most popular",
-    price: "From $1,500",
+    price: "Custom quote",
     description:
       "A complete digital growth package for businesses that need a stronger website, automation, and conversion-focused systems.",
     icon: Globe2,
@@ -157,11 +157,11 @@ export default function Pricing() {
                     {plan.price}
                   </div>
 
-                  {plan.name !== "Scale" && (
-                    <p className="mt-2 text-xs text-slate-600">
-                      Final quote depends on project scope.
-                    </p>
-                  )}
+                  <p className="mt-2 text-xs text-slate-600">
+                    {plan.name === "Launch"
+                      ? "Final quote depends on project scope."
+                      : "Tailored to your project scope."}
+                  </p>
                 </div>
 
                 {/* Features */}
@@ -278,7 +278,7 @@ export default function Pricing() {
 
         {/* Pricing disclaimer */}
         <p className="mt-6 text-center text-xs leading-6 text-slate-600">
-          Prices shown are starting estimates. Final pricing depends on
+          Launch projects start at PKR 15,000. Final pricing depends on
           requirements, integrations, complexity, timeline, and ongoing
           support.
         </p>

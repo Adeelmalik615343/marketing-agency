@@ -60,7 +60,7 @@ export default function Process() {
       {/* Background */}
       <div className="pointer-events-none absolute left-[15%] top-20 h-72 w-72 rounded-full bg-amber-400/5 blur-[120px]" />
 
-      <div className="pointer-events-none absolute bottom-0 right-[10%] h-80 w-80 rounded-full bg-blue-500/5 blur-[130px]" />
+      <div className="pointer-events-none absolute bottom-0 right-[10%] h-80 w-80 rounded-full bg-orange-500/5 blur-[130px]" />
 
       <div className="relative mx-auto max-w-7xl">
         <ScrollReveal>

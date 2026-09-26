@@ -59,7 +59,7 @@ const faqs = [
   {
     question: "How much does a project cost?",
     answer:
-      "Pricing depends on the project scope, technology, integrations, timeline, and support requirements. We offer starting packages as well as custom quotes.",
+      "Launch projects start at PKR 15,000. Final pricing depends on the project scope, technology, integrations, timeline, and support requirements; larger projects receive a custom quote.",
   },
   {
     question: "Do you provide ongoing support?",

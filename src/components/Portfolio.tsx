@@ -22,6 +22,13 @@ const projects = [
     url: "https://myweb-va1l.vercel.app/#portfolio",
   },
   {
+    title: "Zarqash Collection",
+    description:
+      "An elegant Pakistani fashion storefront featuring curated collections, PKR pricing, and nationwide delivery.",
+    url: "https://marketing-agency-main-main.vercel.app/",
+    caseStudy: "/case-studies/zarqash-collection",
+  },
+  {
     title: "Food Ordering Website",
     description:
       "A responsive food-ordering website with a simple and user-friendly customer experience.",
