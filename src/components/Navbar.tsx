@@ -6,7 +6,7 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import gsap from "gsap";
 
 const navItems = [
-  { label: "Services", href: "#services" },
+  { label: "Services", href: "/services" },
   { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },

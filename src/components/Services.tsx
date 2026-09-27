@@ -17,6 +17,7 @@ const services = [
     number: "01",
     title: "Web & App Development",
     shortTitle: "Web Development",
+    slug: "web-development",
     description:
       "High-performance business websites, web apps, dashboards, landing pages, and custom digital platforms built for speed, usability, and growth.",
     icon: Code2,
@@ -26,6 +27,7 @@ const services = [
     number: "02",
     title: "AI Chatbots & AI Systems",
     shortTitle: "AI Solutions",
+    slug: "ai-chatbots",
     description:
       "AI-powered chatbots, customer assistants, knowledge systems, and API integrations that help businesses automate conversations and support.",
     icon: Bot,
@@ -35,6 +37,7 @@ const services = [
     number: "03",
     title: "Python Automation",
     shortTitle: "Automation",
+    slug: "python-automation",
     description:
       "Automate repetitive business workflows, data processing, content pipelines, reporting, publishing, and integrations with custom Python systems.",
     icon: Workflow,
@@ -44,6 +47,7 @@ const services = [
     number: "04",
     title: "E-commerce Development",
     shortTitle: "E-commerce",
+    slug: "ecommerce-development",
     description:
       "Conversion-focused online stores with product management, payments, custom functionality, integrations, and scalable commerce experiences.",
     icon: ShoppingBag,
@@ -53,6 +57,7 @@ const services = [
     number: "05",
     title: "SEO & Organic Growth",
     shortTitle: "SEO",
+    slug: "seo-organic-growth",
     description:
       "Technical SEO, structured content, landing pages, blogs, internal linking, and content systems designed to build sustainable organic visibility.",
     icon: Search,
@@ -62,6 +67,7 @@ const services = [
     number: "06",
     title: "Paid Ads & Lead Generation",
     shortTitle: "Paid Growth",
+    slug: "paid-ads-growth",
     description:
       "Conversion-focused advertising systems that connect campaigns, landing pages, tracking, and lead funnels to turn traffic into business opportunities.",
     icon: Megaphone,
@@ -71,6 +77,7 @@ const services = [
     number: "07",
     title: "Backend & API Systems",
     shortTitle: "Backend Systems",
+    slug: "backend-api-systems",
     description:
       "Secure backend systems, REST APIs, authentication, databases, admin panels, payment integrations, and business logic for modern applications.",
     icon: Database,
@@ -155,10 +162,10 @@ export default function Services() {
                     </p>
 
                     <a
-                      href="#contact"
+                      href={`/services/${service.slug}`}
                       className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-amber-300 transition group-hover:text-amber-200"
                     >
-                      Discuss this service
+                      Explore this service
                       <ArrowRight
                         size={15}
                         className="transition-transform group-hover:translate-x-1"
