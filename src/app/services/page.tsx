@@ -62,7 +62,7 @@ export default function ServicesOverviewPage() {
             Our services
           </p>
           <h1 className="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-            Digital solutions built for business growth.
+            Digital solutions built to grow modern businesses.
           </h1>
           <p className="mt-6 text-lg leading-8 text-slate-300">
             We design, build, automate, and optimize online systems that help businesses grow faster and operate more efficiently.
