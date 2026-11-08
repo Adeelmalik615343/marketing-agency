@@ -11,7 +11,7 @@ export default function CTA() {
               <div className="max-w-2xl">
                 <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-300">Let’s build something memorable</p>
                 <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
-                  Ready to turn your idea into a premium digital experience?
+                  Ready2 to turn your idea into a premium digital experience?
                 </h2>
                 <p className="mt-5 text-lg leading-8 text-slate-300">
                   Let&apos;s talk about your goals, your timeline, and the kind of brand presence you want to create.
